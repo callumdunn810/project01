@@ -1,22 +1,15 @@
-from falsk import Flask
+from os import getenv
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, IntegerField
+
 app = Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:Grg170dx@34.105.139.189:3306/projectdb"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-db.SQLAlchemy(app)
+app.config['SECRET_KEY'] = 'hfgdhff'
 
-# class Products(FlaskForm):
-#     brand = StringField('Brand :')
-#     model = StringField('Type :')
-#     exposure = StringField('Exposure :')
-#     submit = SubmitField('Go!')
+db = SQLAlchemy(app)
 
-
-
-
-
+from application import forms
 from application import routes

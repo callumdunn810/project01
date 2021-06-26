@@ -1,0 +1,37 @@
+
+<html>
+    <head>
+        <title>Submit a request</title> 
+<div class="topnav">
+  <a class="active" href=" {{ ('/') }}">Home</a> &nbsp;
+  <a href=" {{ ('about') }}">About</a> &nbsp;
+  <a href=" {{ ('stock') }}">Stock</a> &nbsp;
+  <a href=" {{ ('order-request') }}">Order Request</a>
+</div>
+    <head>
+        <body>
+            <h1>Submit An order Request:</h1>
+            <div class='form'>
+                <form method='POST' action=''>
+                    {{ form.hidden_tag() }}
+                    {{ form.brand.label }} {{ form.brand }}<br>
+                    <p>
+                    </p>
+                    {{ form.film_name.label }} {{ form.film_name }}<br>
+                    <p>
+                    </p>
+                    {{ form.exposure.label }} {{ form.exposure }}
+                    <p>
+                    {{ form.price.label }} {{ form.price }}
+                    </p>
+                    <p>
+                    {{ form.quantity.label }} {{ form.quantity }}
+                    </p>
+                    <br>
+                    {{ form.submit }}
+                {{ message }}
+                </form>
+            </div>
+            <p>Made a mistake? click <a href="{{('order-undo')}}">here</a> to undo the order! or <a href="{{('order-update')}}">here</a> to update an order that has already been placed.</a></p>
+        </body>
+    </html>

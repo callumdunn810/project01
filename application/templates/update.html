@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+        <title>Update Order</title> 
+<div class="topnav">
+  <a class="active" href=" {{ ('/') }}">Home</a> &nbsp;
+  <a href=" {{ ('about') }}">About</a> &nbsp;
+  <a href=" {{ ('stock') }}">Stock</a> &nbsp;
+  <a href=" {{ ('order-request') }}">Order Request</a>
+</div>
+  <head>
+      <body>
+          <h1>Update Your Order:</h1>
+          <div class='form'>
+              <form method='POST' action=''>
+                  {{ form.hidden_tag() }}
+                  {{ form.brand.label }} {{ form.brand }}<br>
+                  <p>
+                  </p>
+                  {{ form.film_name.label }} {{ form.film_name }}<br>
+                  <p>
+                  </p>
+                  {{ form.exposure.label }} {{ form.exposure }}
+                  <p>
+                  {{ form.price.label }} {{ form.price }}
+                  </p>
+                  <p>
+                  {{ form.quantity.label }} {{ form.quantity }}
+                  </p>
+                  <br>
+                  {{ form.submit }}
+                {{ message }}
+              </form>
+          </div>
+      </body>
+  </html>

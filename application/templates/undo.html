@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Undo Order</title> 
+<div class="topnav">
+  <a class="active" href=" {{ ('/') }}">Home</a> &nbsp;
+  <a href=" {{ ('about') }}">About</a> &nbsp;
+  <a href=" {{ ('stock') }}">Stock</a> &nbsp;
+  <a href=" {{ ('order-request') }}">Order Request</a>
+</div>
+    <head>
+        <body>
+            <h1>Undo Request:</h1>
+            <h1>WARNING: deleting an order may result in you still being charged. if this happens contact our costomer support</h1>
+            <div class='form'>
+                <form method='DELETE' action=''>
+                    {{ form.hidden_tag() }}
+                    {{ form.product_id.label }} {{ form.product_id }}<br>
+                    </p>
+                    <br>
+                    {{ form.submit }}
+                    {{ message }}
+                </form>
+            </div>
+        </body>
+    </html>
