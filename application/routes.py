@@ -74,12 +74,12 @@ def add():
 
 ###################################################### order update #########################################################################
 
-@app.route('/order-update', methods=['GET', 'POST'])
+@app.route('/order-update', methods=['GET', 'POST', 'PUT'])
 def update():
     error = ''
     form = UpdateForm()
 
-    if request.method == 'POST':
+    if request.method == 'PUT':
         brand = Stock(manufacturer="Brand")
         film_name = Stock(model="Film Name")
         exposure = Stock(exposure="Exposure")
@@ -104,8 +104,8 @@ def delete():
     form = DeleteForm()
     if request.method == 'DELETE':
         stock = Stock.query.get(form.product_id.data)
-        db.session.delete(stock)
+        db.session.remove(stock)
         db.session.commit()
-    return render_template('undo.html', form=form) + "Order deleted, Thank you."
+    return render_template('undo.html', form=form)
 
 print('=========end routes ============')
