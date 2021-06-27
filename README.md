@@ -27,7 +27,7 @@ When the application is launched you will be taken to the home page displaying a
 You can then navigate to the other pages using the topnav function, the second page is a simple about page explaining what the shop is
 [Imgur](https://i.imgur.com/Y7m70Pg.png)
 
-# Stock
+# Read
 Next, you can view all the products we have in stock by clicking the "Stock" link
 [Imgur](https://i.imgur.com/KkgHQJT.png)
 
