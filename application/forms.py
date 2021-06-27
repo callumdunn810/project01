@@ -21,13 +21,14 @@ class UpdateForm(FlaskForm):
     price = StringField('Price:')
     quantity = StringField('Quantity:')
     submit = SubmitField('Update order')
+    product_id = IntegerField('Order Number')
 
 class StockForm(FlaskForm):
     stock_name = SelectField('Stock name', choices = [('Kodak'),('Fuji'),('Ilford')])
     submit = SubmitField('Search:')
 
 class DeleteForm(FlaskForm):
-    product_id = IntegerField('Order Number')
+    product_id = IntegerField('Order Number :')
     submit = SubmitField('Delete Order')
 
     print('===========end forms====================')

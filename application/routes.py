@@ -80,17 +80,25 @@ def update():
     form = UpdateForm()
 
     if request.method == 'PUT':
-        brand = Stock(manufacturer="Brand")
-        film_name = Stock(model="Film Name")
-        exposure = Stock(exposure="Exposure")
-        price = Stock(price="Price")
-        quantity = Stock(quantity="Quantity")
+        brand = form.brand.data
+        film_name = form.film_name.data
+        exposure = form.exposure.data
+        price = form.price.data
+        quantity = form.quantity.data
+        product_id = form.product_id.data
 
         if len(brand) == 0 or len(film_name) == 0 or len(exposure) == 0 or len(price) ==0 or len(quantity) ==0:
             error = "*Please fill all fields*"
             
         else:
-            new = Stock(manufacturer=form.brand.data, model=form.film_name.data, exposure=form.exposure.data, price=form.price.data, quantity=form.quantity.data)
+            stock = Stock.query.filter_by(id=form.product_id.data).first()
+            stock.brand = form.brand.data
+            stock.film_name = form.film_name.data
+            stock.exposure = form.exposure.data
+            stock.price = form.price.data
+            stock.quantity = form.quantity.data
+            stock.product_id = form.product_id.data
+
             db.session.commit()
             return " Order submitted, We'll email you when it has been dispatched! "
     return render_template('update.html', form=form, message=error)
