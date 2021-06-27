@@ -10,6 +10,9 @@ The project unfortunately had quite a few setbacks at the start, mainly figuring
 
 I believe with more time and practice these functions and the testing will be working 100% ​
 
+# Database Relationship
+Pictured below is an entity relationship diagram (ERD) showing the structure of the database which is a one to many relationship.
+[Imgur](https://i.imgur.com/jUZHIry.png)
 
 # Risk Assessment
 
