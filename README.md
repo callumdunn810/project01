@@ -1,4 +1,4 @@
-# # Application 
+# Application 
 
 The main aim of this app is to mimic a camera shop allowing you to create, update and delete an order while also being able to list the products currently in stock on the database.
 
